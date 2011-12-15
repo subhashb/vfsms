@@ -1,0 +1,3 @@
+module Vfsms
+  VERSION = "0.0.1"
+end
