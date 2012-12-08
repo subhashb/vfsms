@@ -3,8 +3,17 @@ require "vfsms/config"
 require 'net/http'
 require 'uri'
 
+=begin
+initializer format
+# Vfsms.config do |config|
+#   config.username = useranme
+#   config.password = password
+#   config.url = url
+# end
+=end
+
 module Vfsms
-  def self.config(opts)
+  def self.config(opts = {})
     @config ||= Vfsms::Config.new(opts)
     yield(@config) if block_given?
     @config
